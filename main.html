@@ -1,0 +1,40 @@
+<!--Made by Henry Kaufman-->
+<div>
+    <form>
+        <!--        The Post Name-->
+        <div class="form-group">
+            <label class="control-label" for="focusedInput">Post Name</label>
+            <input type="text" ng-model="post.name" class="form-control">
+        </div>
+        <!--        The Post Description-->
+        <div class="form-group">
+            <label class="control-label" for="focusedInput">Post Description</label>
+            <input type="text" ng-model="post.description" class="form-control">
+        </div>
+        <!--        The Post URL-->
+        <div class="form-group">
+            <label class="control-label" for="focusedInput">Post URL</label>
+            <input type="text" ng-model="post.url" class="form-control">
+        </div>
+        <br>
+        <!--        Save Post-->
+        <button ng-click="savePost(post)" class="btn btn-success btn-block">Save Post</button>
+    </form>
+</div>
+<!--Repeats through all the posts that are found-->
+<div ng-repeat="post in posts">
+    <!--    The post name and URL-->
+    <h2><a ng-href="{{post.url}}">{{post.name}}</a></h2>
+    <!--    The post description-->
+    <p>{{post.description}}</p>
+    <button ng-click="deletePost(post)" class="btn btn-danger">Delete Post</button>
+    <!--    The post votes-->
+    <span>{{post.votes}}</span>
+    <!--    Add a new vote-->
+    <button ng-click="addVote(post)" class="btn btn-primary">Add Vote</button>
+</div>
+<br>
+<!--Login in with Twitter-->
+<button class="btn btn-primary" ng-click="login()">Login with Twitter</button>
+<!--Displays who is currently logged in-->
+<span>Currently logged in as: {{authData.twitter.username}}</span>

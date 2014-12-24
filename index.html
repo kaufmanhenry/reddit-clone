@@ -1,0 +1,30 @@
+<!--Made by Henry Kaufman-->
+<!doctype html>
+<html ng-app="reddit-clone">
+
+<head>
+    <!--    For responsive design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    Angular.min.js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <!--    Angular-Route.min.js for URL rerouting-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>
+    <!--    Firebase.js-->
+    <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+    <!--    AngularFire.min.js-->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+    <!--    The bootstrap CSS-->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--    The Main App.js file-->
+    <script src="app.js"></script>
+    <title>Reddit Clone</title>
+</head>
+
+<body style="width: 80%; margin: 0 auto">
+    <!--    Header text-->
+    <h1 class="text-center">The Best Reddit Clone</h1>
+    <!--    The ng-view that displays the URL rerouting-->
+    <div ng-view></div>
+</body>
+
+</html>
