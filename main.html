@@ -32,8 +32,25 @@
     <span>{{post.votes}}</span>
     <!--    Add a new vote-->
     <button ng-click="addVote(post)" class="btn btn-primary">Add Vote</button>
+    <br>
+    <br>
+    <div class="panel panel-default" ng-repeat="comment in comments">
+        <div class="panel-body">
+            <a ng-href="https://twitter.com/{{comment.user}}">{{comment.user}}</a>
+        </div>
+        <div class="panel-footer">{{comment.text}}</div>
+    </div>
+    <form>
+        <div class="input-group">
+            <input ng-model="comment.text" class="form-control">
+            <div class="input-group-btn">
+                <button ng-click="addComment(post, comment)" class="btn btn-success">Add Comment</button>
+            </div>
+        </div>
+    </form>
 </div>
 <br>
+
 <!--Login in with Twitter-->
 <button class="btn btn-primary" ng-click="login()">Login with Twitter</button>
 <!--Displays who is currently logged in-->
