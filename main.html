@@ -38,7 +38,11 @@
         <div class="panel-body">
             <a ng-href="https://twitter.com/{{comment.user}}">{{comment.user}}</a>
         </div>
-        <div class="panel-footer">{{comment.text}}</div>
+        <div class="panel-footer">
+            {{comment.text}}
+            <br>
+            <button class="btn btn-danger" ng-click="removeComment(post, comment)">Remove Comment</button>
+        </div>
     </div>
     <form>
         <div class="input-group">
